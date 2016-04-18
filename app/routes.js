@@ -19,7 +19,6 @@ module.exports = function (app) {
     // get all todos
     app.get('/api/food', function (req, res) {
         // use mongoose to get all todos in the database
-        console.log('hi');
         getTodos(res);
         
     });
@@ -58,7 +57,26 @@ module.exports = function (app) {
 
     // get sum of food prices
     app.get('/api/total', function (req, res) {
-           
+           Todo.aggregate(
+            [
+                {
+                    $group:{
+                        _id: 'subtotal',
+                        total: {
+                        $sum : "$price"
+                        }
+                    }
+                }
+            ],
+                function(err,results){
+                if(err){
+                    console.log(err);
+                    return;
+                }
+                var temp = results[0].total;
+                var taxed_total = temp + (temp*0.075);
+                res.json(taxed_total);        
+            });        
     });
     
     // application -------------------------------------------------------------

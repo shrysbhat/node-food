@@ -1,4 +1,4 @@
-# Node Todo App
+# Node Food App
 
 A Node app built with MongoDB and Angular. For demonstration purposes and a tutorial.
 
