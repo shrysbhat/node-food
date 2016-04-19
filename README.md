@@ -1,3 +1,11 @@
+Update - 
+Completed 4 steps - 
+1. Setup a runtime environment.
+2. Database setup on MongoDB to include 'food_name' & 'price'.
+3. Order total API - http://localhost:8080/api/total
+4. Basic & functional User Interface - localhost:8080 is the Angular.js web application with an interface that can interact with all available APIs. The interface is very basic & functional.
+
+
 # Node Food App
 
 A Node app built with MongoDB and Angular. For demonstration purposes and a tutorial.
