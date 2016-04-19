@@ -23,7 +23,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
 
 	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
-	<script src="js/services/foods.js"></script> <!-- load our todo service -->
+	<script src="js/services/foods.js"></script> <!-- load our food service -->
 	<script src="js/core.js"></script> <!-- load our main application -->
 
 </head>
@@ -33,7 +33,7 @@
 
 		<!-- HEADER AND TODO COUNT -->
 		<div class="jumbotron text-center">
-			<h1>I'm a Todo-aholic <span class="label label-info">{{ foods.length }}</span></h1>
+			<h1>I'm a Food-aholic <span class="label label-info">{{ foods.length }}</span></h1>
 		</div>
 
 		<!-- TODO LIST -->
@@ -45,7 +45,7 @@
 				<!-- LOOP OVER THE TODOS IN $scope.todos -->
 				<div class="checkbox" ng-repeat="food in foods">
 					<label>
-						<input type="checkbox" ng-click="deleteTodo(food._id)"> {{ food.food_name }}
+						<input type="checkbox" ng-click="deleteFood(food.food_name)"> {{ food.food_name }}
 					</label>
 				</div>
 
@@ -63,7 +63,8 @@
 					<div class="form-group">
 
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a dish that I Love" ng-model="formData.text">
+						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a dish that I Love" ng-model="formData.food_name">
+                        <input type="number" class="form-control input-lg text-center" placeholder="Enter price for this dish" ng-model="formData.price">
 					</div>
 
 					<!-- createToDo() WILL CREATE NEW TODOS -->
