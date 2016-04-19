@@ -1,4 +1,8 @@
 # Update - 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 Completed 4 steps - 
 
 1. Setup a runtime environment.
@@ -9,6 +13,7 @@ Completed 4 steps -
 
 4. Basic & functional User Interface - localhost:8080 is the Angular.js web application with an interface that can interact with all available APIs. The interface is very basic & functional.
 
+5. Included a [bonus.txt](https://github.com/shrysbhat/node-food/blob/master/bonus.txt) with enhancement points in it.
 
 # Node Food App
 
