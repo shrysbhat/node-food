@@ -38,14 +38,28 @@
 
 		<!-- TODO LIST -->
 		<div id="todo-list" class="row">
-			<div class="col-sm-4 col-sm-offset-4">
+			<div class="col-sm-6 col-sm-offset-3">
+                <div class="table-responsive">          
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Food Item</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="food in foods">
+                            <td>
+                                <input type="checkbox" ng-click="deleteFood(food.food_name)"> {{ food.food_name }}
+                            </td>
+                            <td>$ {{food.price}}</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                  </div>
 
 				<!-- LOOP OVER THE TODOS IN $scope.foods -->
-				<div class="checkbox" ng-repeat="food in foods">
-					<label>
-						<input type="checkbox" ng-click="deleteFood(food.food_name)"> {{ food.food_name }}
-					</label>
-				</div>
+				
 
 				<p class="text-center" ng-show="loading">
 					<span class="fa fa-spinner fa-spin fa-3x"></span>
