@@ -8,27 +8,23 @@ function getFoods(res) {
             res.send(err);
         }
 
-        res.json(foods); // return all todos in JSON format
+        res.json(foods); // return all foods in JSON format
     });
-}
-;
+};
 
 module.exports = function (app) {
 
     // api ---------------------------------------------------------------------
-    // get all todos
+    // get all foods
     app.get('/api/food', function (req, res) {
-        // use mongoose to get all todos in the database
+        // use mongoose to get all foods in the database
         getFoods(res);
-        
     });
 
-    // create todo and send back all todos after creation
+    // create food and send back all foods after creation
     app.post('/api/food', function (req, res) {
 
-        console.log('food - ' + req.body.food_name);
-        console.log('price - ' + req.body.price);
-        // create a todo, information comes from AJAX request from Angular
+        // create a food, information comes from AJAX request from Angular
         Food.create({
             food_name: req.body.food_name,
             price: req.body.price
@@ -37,13 +33,13 @@ module.exports = function (app) {
             if (err)
                 res.send(err);
 
-            // get and return all the todos after you create another
+            // get and return all the foods after you create another
             getFoods(res);
         });
 
     });
 
-    // delete a todo
+    // delete a food
     app.delete('/api/food/:food_name', function (req, res) {
         Food.remove({
             food_name: req.params.food_name

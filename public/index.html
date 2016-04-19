@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
-	<title>Node/Angular Todo App</title>
+	<title>Node/Angular Food App</title>
 
 	<!-- SCROLLS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
@@ -40,9 +40,7 @@
 		<div id="todo-list" class="row">
 			<div class="col-sm-4 col-sm-offset-4">
 
-				
-
-				<!-- LOOP OVER THE TODOS IN $scope.todos -->
+				<!-- LOOP OVER THE TODOS IN $scope.foods -->
 				<div class="checkbox" ng-repeat="food in foods">
 					<label>
 						<input type="checkbox" ng-click="deleteFood(food.food_name)"> {{ food.food_name }}
@@ -67,16 +65,36 @@
                         <input type="number" class="form-control input-lg text-center" placeholder="Enter price for this dish" ng-model="formData.price">
 					</div>
 
-					<!-- createToDo() WILL CREATE NEW TODOS -->
+					<!-- createFood() WILL CREATE NEW FOODS -->
 					<button type="submit" class="btn btn-primary btn-lg" ng-click="createFood()">Add</button>
 				</form>
 			</div>
 		</div>
+        
+        <div class="col-lg-12 col-md-6">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3"> <i class="fa fa-shopping-cart fa-4x"></i></div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><!--<span class="label label-info">{{ taxedTotal }}
+                                <div>Total</div></span>-->
+                            <button type="submit" class="btn btn-danger btn-lg" ng-click="getTotal()">Total</button>
+                                <input class="input-lg" type="text" disabled ng-model="total">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 		<div class="text-center text-muted">
 			<p>A demo by <a href="http://scotch.io">Scotch</a>.</p>
 			<p>Read the <a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">tutorial</a>.</p>
 		</div>
+        
+        
 
 	</div>
 

@@ -1,0 +1,2 @@
+Points - 
+1. Have a 'total' button & display total of all the food items upon clicking it.
