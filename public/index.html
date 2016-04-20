@@ -60,11 +60,9 @@
 
 				<!-- LOOP OVER THE TODOS IN $scope.foods -->
 				
-
 				<p class="text-center" ng-show="loading">
 					<span class="fa fa-spinner fa-spin fa-3x"></span>
 				</p>
-
 			</div>
 		</div>
 
@@ -73,12 +71,10 @@
 			<div class="col-sm-8 col-sm-offset-2 text-center">
 				<form>
 					<div class="form-group">
-
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
 						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a dish that I Love" ng-model="formData.food_name"><br>
                         <input type="number" class="form-control input-lg text-center" placeholder="Enter price for this dish" ng-model="formData.price">
 					</div>
-
 					<!-- createFood() WILL CREATE NEW FOODS -->
 					<button type="submit" class="btn btn-primary btn-lg" ng-click="createFood()">Add</button>
 				</form>
@@ -91,12 +87,10 @@
                     <div class="row">
                         <div class="col-xs-3"> <i class="fa fa-shopping-cart fa-4x"></i></div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge"><!--<span class="label label-info">{{ taxedTotal }}
-                                <div>Total</div></span>-->
-                            <button type="submit" class="btn btn-danger btn-lg" ng-click="getTotal()">Total</button>
+                            <div class="huge">
+                                <button type="submit" class="btn btn-danger btn-lg" ng-click="getTotal()">Total</button>
                                 <input class="input-lg" type="text" disabled ng-model="total">
                             </div>
-                            
                         </div>
                     </div>
                 </div>

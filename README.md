@@ -1,8 +1,5 @@
 # Update - 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 Completed 4 steps - 
 
 1. Setup a runtime environment.
@@ -43,6 +40,6 @@ Each branch represents a certain tutorial.
 - tut2-organization: [Application Organization and Structure](https://scotch.io/tutorials/node-and-angular-to-do-app-application-organization-and-structure)
 - tut3-services: [Controllers and Services](https://scotch.io/tutorials/node-and-angular-to-do-app-controllers-and-services)
 
-Happy Todo-ing!
+Happy Food-ing!
 
-![Todo-aholic](http://i.imgur.com/ikyqgrn.png)
+![Food-aholic](http://i.imgur.com/CGdYago.png)

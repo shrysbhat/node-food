@@ -67,10 +67,14 @@ module.exports = function (app) {
                 function(err,results){
                 if(err){
                     console.log(err);
-                    return;
                 }
-                var temp = results[0].total;
-                var taxed_total = temp + (temp*0.075);
+                else if(results.length > 0){
+                    var temp = results[0].total;
+                    var taxed_total = temp + (temp*0.075);
+                }
+                else{
+                    var taxed_total = 0;    
+                }    
                 res.json(taxed_total);        
             });        
     });
